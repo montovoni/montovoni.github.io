@@ -1,7 +1,3 @@
-# douglas.montovoni
-
-Site estático (HTML/CSS/JS puro, sem build), pronto para o GitHub Pages.
-
 ## Como publicar
 
 1. Crie um repositório no GitHub, por exemplo `montovoni.github.io` (esse nome específico publica direto na raiz do seu usuário) ou qualquer outro nome, como `portfolio`.
