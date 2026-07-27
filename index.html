@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <!-- Tailwind CSS (Para estilização rápida) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configurações de cores baseadas no seu modelo -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#0a0a0c',
+                        foreground: '#ffffff',
+                        muted: '#a1a1aa',
+                        accent: '#ed3237', // Vermelho destaque
+                        line: 'rgba(255, 255, 255, 0.1)'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['Courier New', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Efeito de Vidro (Glassmorphism) igual ao original */
+        body { background-color: #0a0a0c; color: #ffffff; }
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 0.75rem;
+            backdrop-filter: blur(12px);
+            transition: all 0.3s ease;
+        }
+        .glass:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+        .pulse-dot {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: .5; }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col font-sans antialiased selection:bg-accent selection:text-white">
+
+    <!-- Efeito de luz de fundo -->
+    <div class="fixed -z-10 top-[-20%] left-1/2 h-[60vh] w-[80vw] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgba(237,50,55,0.08),transparent)]"></div>
+
+    <!-- Cabeçalho / Menu -->
+    <header class="fixed inset-x-0 top-0 z-40 border-b border-line bg-background/80 backdrop-blur-md">
+        <div class="mx-auto flex h-14 w-full max-w-5xl items-center justify-between px-6">
+            <a href="#top" class="font-mono text-sm font-bold tracking-tight">
+                <span class="text-accent">~/</span>seu-nome.dev
+            </a>
+            <nav class="hidden md:flex items-center gap-6 font-mono text-xs text-muted">
+                <a href="#sobre" class="hover:text-accent transition-colors">sobre</a>
+                <a href="#stack" class="hover:text-accent transition-colors">stack</a>
+                <a href="#projetos" class="hover:text-accent transition-colors">projetos</a>
+            </nav>
+            <div class="flex items-center gap-2 rounded-full border border-line px-3 py-1 font-mono text-[10px] text-green-400">
+                <span class="pulse-dot inline-block h-1.5 w-1.5 rounded-full bg-green-400"></span>
+                DISPONÍVEL
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-1 w-full max-w-5xl mx-auto px-6 pt-32 pb-16">
+        
+        <!-- Seção Hero (Início) -->
+        <section id="top" class="flex flex-col items-center text-center pb-24">
+            <div class="glass inline-flex items-center gap-2 px-4 py-2 font-mono text-xs text-muted mb-6">
+                <span class="pulse-dot inline-block h-1.5 w-1.5 rounded-full bg-green-400"></span>
+                <span class="text-green-400">Pronto para novos desafios</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-4">
+                Seu <span class="bg-gradient-to-r from-accent to-orange-500 bg-clip-text text-transparent">Nome Aqui</span>
+            </h1>
+            <p class="max-w-xl text-lg text-muted md:text-xl mb-8">
+                Desenvolvedor de Software focado em criar soluções modernas, performáticas e escaláveis.
+            </p>
+            <div class="flex gap-4">
+                <a href="#projetos" class="rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-white hover:bg-red-600 transition-colors">
+                    Ver projetos
+                </a>
+                <a href="https://github.com/seugithub" target="_blank" class="rounded-lg border border-line bg-white/5 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10 transition-colors">
+                    GitHub
+                </a>
+            </div>
+        </section>
+
+        <!-- Divisória -->
+        <hr class="border-line my-16">
+
+        <!-- Seção Sobre e Stack -->
+        <section id="sobre" class="scroll-mt-24 mb-24">
+            <p class="font-mono text-xs uppercase tracking-widest text-accent mb-2">01 · sobre mim</p>
+            <h2 class="text-3xl font-semibold mb-8">Conhecimentos Técnicos</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <!-- Card 1 -->
+                <div class="glass p-6">
+                    <p class="font-mono text-xs tracking-widest text-accent mb-4">FRONTEND</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="rounded-md border border-line bg-white/5 px-2.5 py-1 font-mono text-xs">HTML / CSS</span>
+                        <span class="rounded-md border border-line bg-white/5 px-2.5 py-1 font-mono text-xs">JavaScript</span>
+                        <span class="rounded-md border border-line bg-white/5 px-2.5 py-1 font-mono text-xs">React</span>
+                        <span class="rounded-md border border-line bg-white/5 px-2.5 py-1 font-mono text-xs">Tailwind</span>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="glass p-6">
+                    <p class="font-mono text-xs tracking-widest text-accent mb-4">BACKEND</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="rounded-md border border-line bg-white/5 px-2.5 py-1 font-mono text-xs">Node.js</span>
+                        <span class="rounded-md border border-line bg-white/5 px-2.5 py-1 font-mono text-xs">Python</span>
+                        <span class="rounded-md border border-line bg-white/5 px-2.5 py-1 font-mono text-xs">SQL</span>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="glass p-6">
+                    <p class="font-mono text-xs tracking-widest text-accent mb-4">FERRAMENTAS</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="rounded-md border border-line bg-white/5 px-2.5 py-1 font-mono text-xs">Git / GitHub</span>
+                        <span class="rounded-md border border-line bg-white/5 px-2.5 py-1 font-mono text-xs">Docker</span>
+                        <span class="rounded-md border border-line bg-white/5 px-2.5 py-1 font-mono text-xs">Figma</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Projetos -->
+        <section id="projetos" class="scroll-mt-24">
+            <p class="font-mono text-xs uppercase tracking-widest text-accent mb-2">02 · portfólio</p>
+            <h2 class="text-3xl font-semibold mb-8">Projetos em Destaque</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Projeto 1 -->
+                <a href="#" class="glass p-6 group block">
+                    <h3 class="font-mono text-lg font-semibold text-white mb-2 group-hover:text-accent transition-colors">NomeDoProjeto-01</h3>
+                    <p class="text-sm text-muted mb-4">Uma breve descrição do que este projeto faz, as tecnologias utilizadas e o problema que ele resolve.</p>
+                    <p class="font-mono text-xs text-muted">React · Tailwind · Node.js</p>
+                </a>
+                
+                <!-- Projeto 2 -->
+                <a href="#" class="glass p-6 group block">
+                    <h3 class="font-mono text-lg font-semibold text-white mb-2 group-hover:text-accent transition-colors">NomeDoProjeto-02</h3>
+                    <p class="text-sm text-muted mb-4">Uma breve descrição do que este projeto faz, as tecnologias utilizadas e o problema que ele resolve.</p>
+                    <p class="font-mono text-xs text-muted">Python · SQLite · APIs</p>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-line py-8 text-center mt-12">
+        <p class="font-mono text-xs text-muted">© 2026 Seu Nome Aqui — Feito com HTML e Tailwind CSS</p>
+    </footer>
+
+</body>
+</html>
