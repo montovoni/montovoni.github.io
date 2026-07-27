@@ -1,4 +1,4 @@
-# douglas.montovoni — portfólio
+# douglas.montovoni
 
 Site estático (HTML/CSS/JS puro, sem build), pronto para o GitHub Pages.
 
