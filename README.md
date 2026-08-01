@@ -12,4 +12,4 @@
 
 ## Editar conteúdo
 
-Os textos e links (e-mail, LinkedIn, GitHub) estão diretamente no `index.html`, dentro da seção `#contato` e nos cards de `#stack`/`#experiencia` — não há dados externos ou build step.
+Os textos e links (e-mail, LinkedIn, GitHub) estão diretamente no `index.html`, dentro da seção `#contato` e nos cards de `#stack`/`#experiencia` - não há dados externos ou build step.
