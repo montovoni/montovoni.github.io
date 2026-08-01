@@ -1,4 +1,3 @@
-// menu mobile
 const navToggle = document.getElementById('navToggle');
 const navLinks = document.querySelector('.nav-links');
 
@@ -14,7 +13,6 @@ navLinks.querySelectorAll('a').forEach(link => {
   });
 });
 
-// revelação suave ao rolar
 const revealEls = document.querySelectorAll('.reveal');
 const io = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -27,7 +25,6 @@ const io = new IntersectionObserver((entries) => {
 
 revealEls.forEach(el => io.observe(el));
 
-// data de emissão dinâmica
 const issuedEl = document.getElementById('issuedDate');
 if (issuedEl) {
   const now = new Date();
