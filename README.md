@@ -6,9 +6,9 @@
 
 ## Estrutura
 
-- `index.html` — conteúdo e seções (Sobre, Stack, Experiência, Contato)
-- `style.css` — tema escuro estilo terminal, acento verde-água
-- `script.js` — menu mobile, animação de revelação ao rolar, data dinâmica
+- `index.html` - conteúdo e seções (Sobre, Stack, Experiência, Contato)
+- `style.css` - tema escuro estilo terminal, acento verde-água
+- `script.js` - menu mobile, animação de revelação ao rolar, data dinâmica
 
 ## Editar conteúdo
 
